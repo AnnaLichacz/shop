@@ -6,7 +6,7 @@ import styles from './components/Button/Button.module.scss';
 
 const App = () => {
 
-  const [time, setTime] = useState('');
+  const [time, setTime] = useState(0);
   const [start, setStart] = useState(false);
 
 
@@ -15,8 +15,8 @@ const App = () => {
 
     if(start) {
       interval = setInterval(() => {
-        setTime(prevTime => prevTime + 10)
-      }, 10)
+        setTime(prevTime => prevTime + 50)
+      }, 50)
     } else {
       clearInterval(interval);
     }
